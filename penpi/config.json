@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Hello World",
+      "command": ["echo", "Hello World!"]
+    },
+    {
+      "name": "IP Addresses", 
+      "command": "ip -br -4 addr | awk '{if(NR>1) print $1 \"\r\" $3}'"
+    },
+    {
+      "name": "BT Scan", 
+      "command": "hcitool scan | awk '{if(NR>1) print $2 \"\r\" $1}'"
+    },
+    {
+      "name": "Wireless APs", 
+      "command": "iw dev wlan0 scan | egrep 'SSID' | awk '{print $2}'"
+    },
+    {
+      "name": "Ducky(Win) - Hello World", 
+      "command": "/home/pi/demo/ducky.py /home/pi/demo/hello.duck"
+    },
+    {
+      "name": "Ducky(Win) - Hotdog", 
+      "command": "/home/pi/demo/ducky.py hot-dog.duck"
+    },
+    {
+      "name": "Ducky(Lnx) - Hello World", 
+      "command": "/home/pi/demo/ducky.py /home/pi/demo/ubuntu-hello.duck"
+    },
+    {
+      "name": "Dummy7", 
+      "command": ""
+    }
+] 

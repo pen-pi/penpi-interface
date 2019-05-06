@@ -1,0 +1,14 @@
+[Unit]
+Description=PenPi Daemon
+Documentation=http://penpi.coderpunch.com/doc/
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/run_penpi.py
+StandardOutput=null
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=penpi.service
